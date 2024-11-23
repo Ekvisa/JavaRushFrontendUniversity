@@ -1,12 +1,27 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Epilogue", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 $darkColor: #28293E;
+$orangeColor: #EF6D58;
 
 .wrapper {
   width: 1440px;
   margin: 0 auto;
+}
+
+.orange-text {
+  color: $orangeColor;
+  line-height: 32px;
+}
+
+.big-text {
+  color: white;
+  font-weight: 800;
+  font-size: 60px;
 }
 
 .button {
@@ -22,6 +37,12 @@ $darkColor: #28293E;
     background-color: white;
     color: $darkColor;
   }
+}
+
+.button-orange {
+  @extend .button;
+  background-color: $orangeColor;
+
 }
 
 .header {
@@ -55,5 +76,26 @@ $darkColor: #28293E;
       transform: translateY(-2px);
 
     }
+  }
+}
+
+.about {
+  background-color: $darkColor;
+  color: white;
+  &_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 90px 0;
+  }
+  &_text {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: flex-start;
+    &__item {
+      width: 460px;
+    }
+
   }
 }
