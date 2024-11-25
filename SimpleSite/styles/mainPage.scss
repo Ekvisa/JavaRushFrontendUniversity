@@ -12,6 +12,9 @@ $lightColor: #FDF0E9;
 .wrapper {
   width: 1440px;
   margin: 0 auto;
+  @media (max-width: 1440px) {
+    width: 100%;
+  }
 }
 
 .orange-text {
@@ -23,12 +26,18 @@ $lightColor: #FDF0E9;
   color: white;
   font-weight: 800;
   font-size: 60px;
+  @media (max-width: 500px) {
+    font-size: 30px;
+  }
 }
 
 .dark {
   color: #391400;
   width: 470px;
   text-align: center;
+  @media (max-width: 500px) {
+    width: 90%;
+  }
 }
 
 .button {
@@ -60,6 +69,10 @@ $lightColor: #FDF0E9;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+    @media (max-width: 500px) {
+      padding: 10px;
+    }
   }
   &_logo {
     display: flex;
@@ -75,13 +88,30 @@ $lightColor: #FDF0E9;
     display: flex;
     gap: 150px;
     list-style-type: none;
+    @media (max-width: 500px) {
+      display: none;
+    }
   }
   &_list-item {
     cursor: pointer;
     transition: 0.6s;
     &:hover {
       transform: translateY(-2px);
-
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  &_btn {
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+  &_menu {
+    display: none;
+    @media (max-width: 500px) {
+      display: block;
     }
   }
 }
@@ -94,6 +124,11 @@ $lightColor: #FDF0E9;
     align-items: center;
     justify-content: space-between;
     padding: 90px 0;
+    box-sizing: border-box;
+    @media (max-width: 500px) {
+      flex-direction: column-reverse;
+      padding: 10px;
+    }
   }
   &_text {
     display: flex;
@@ -102,8 +137,15 @@ $lightColor: #FDF0E9;
     align-items: flex-start;
     &__item {
       width: 460px;
+      @media (max-width: 500px) {
+        width: 90%;
+      }
+    }    
+  }
+  &_img {
+    @media (max-width: 500px) {
+      width: 90%;
     }
-
   }
 }
 
@@ -115,9 +157,17 @@ $lightColor: #FDF0E9;
     flex-direction: column;
     align-items: center;
     gap: 35px;
+    box-sizing: border-box;
+    @media (max-width: 500px) {
+      padding: 10px;
+    }
   }
   &_cards {
     display: flex;
+    width: 100%;
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -129,6 +179,9 @@ $lightColor: #FDF0E9;
   gap: 20px;
   width: 50%;
   box-sizing: border-box;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
   &_box {
     display: flex;
     align-items: center;
@@ -150,6 +203,9 @@ $lightColor: #FDF0E9;
     color: #7F6454;
     width: 490px;
     line-height: 32px;
+    @media (max-width: 500px) {
+      width: 90%;
+    }
   }
   &_btn {
     background-color: white;
